@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<-- para utilizar o Thymeleaf -->
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+ <head>
+      <meta charset="UTF-8">
+      
+ 
+ </head>
+
+    <body>
+         <h1>Cadastro</h1>
+       
+        <form th:action="@{/cadastro}" method="post">
+        
+           <label  for="idnome">NOME</label>
+           <input id="idnome" type="text"  placeholder="Informe seu nome"/>
+        
+           <label  for="idfone">FONE</label>
+           <input id="idfone" type="text"  placeholder="Informe seu numero"/>
+           
+           <label  for="idemail">Email</label>
+           <input id="idemail" type="text"  placeholder="Informee seu email"/>
+         
+            <button>Salvar</button>
+        
+        </form>
+          
+        
+    </body>
+
+</html>

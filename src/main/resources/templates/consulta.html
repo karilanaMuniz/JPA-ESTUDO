@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<-- para utilizar o Thymeleaf -->
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+ <head>
+      <meta charset="UTF-8">
+      
+ 
+ </head>
+
+    <body>
+      <h1>Consulta</h1>
+    						
+         <table>
+          <thead>
+          <tr>
+          
+          <th>Id</th>
+          <th>Modelo</th>
+          <th>Descrição</th>
+          <th>Loja</th>
+          
+          </tr>
+          
+         </thead>
+         
+         <tbody>
+         
+           <tr th:each="roupinha:${Rroupinhas}">
+           <td th:text="*{roupinha.id}"/>
+           <td th:text="*{roupinha.modelo}"/>
+           <td th:text="*{roupinha.discricao}"/>
+           <td th:text="*{roupinha.loja}"/>
+           <td> <a th:href ="@{'/consulta/'+${roupinha.id}}"></td>/>
+           
+            <td>
+              <a  th:href="@{'/consulta/'${roupinha.id}}">editar</a>
+              <a  th:href="@{'/delete/'${roupinha.id}}">excluir</a>
+            </td>
+           
+   
+           </tr>
+         
+         </tbody>
+   </table>
+       
+        <a th:href="@{/cadastro}">Cadastro</a>
+    </body>
+
+</html>
